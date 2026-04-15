@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join MomFit — Enrollment Advisor (Remote)</title>
+<meta name="description" content="MomFit is hiring a remote Enrollment Advisor — Setter + Closer. High-ticket health coaching sales. Base + commission. OTE $5,800–$9,250+/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --coral:   #C9614A;
+    --coral-lt: #D8725E;
+    --gold:    #C49A6C;
+    --dark:    #2B2926;
+    --gray:    #7A7065;
+    --blush:   #F7EDE8;
+    --cream:   #FAF4F0;
+    --white:   #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,244,240,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,97,74,0.12);
+    padding: 0 5%;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--coral);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    background: var(--coral);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--coral-lt); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5% 80px;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+    text-align: center;
+  }
+
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hb1 { width: 60vw; height: 60vw; top: -20vw; right: -20vw; background: radial-gradient(circle, rgba(201,97,74,0.15), transparent 60%); }
+  .hb2 { width: 40vw; height: 40vw; bottom: -10vw; left: -10vw; background: radial-gradient(circle, rgba(196,154,108,0.12), transparent 60%); }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .live-dot {
+    width: 10px; height: 10px;
+    background: var(--coral);
+    border-radius: 50%;
+    animation: live 2s ease-in-out infinite;
+  }
+  @keyframes live { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+  .eyebrow-text {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 900;
+    color: white;
+    line-height: 1.0;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    color: var(--coral);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto 56px;
+    line-height: 1.7;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 10px 22px;
+    border-radius: 100px;
+  }
+
+  .pill.accent {
+    background: var(--coral);
+    border-color: var(--coral);
+    color: white;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--coral);
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 18px 44px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { background: var(--coral-lt); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: white; border-color: white; }
+
+  .section-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 52px;
+  }
+
+  /* ─── ROLE SECTION ─── */
+  .role-section {
+    padding: 80px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  .col {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .col-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--coral);
+  }
+
+  .role-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+
+  .role-bullet {
+    color: var(--coral);
+    font-size: 18px;
+    line-height: 1.6;
+    flex-shrink: 0;
+  }
+
+  .role-text {
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .role-text strong { font-weight: 700; }
+
+  /* ─── COMP SECTION ─── */
+  .comp-section {
+    background: var(--dark);
+    padding: 80px 5%;
+  }
+
+  .comp-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .comp-section .section-label { color: var(--gold); }
+  .comp-section .section-title { color: white; }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2px;
+  }
+
+  .comp-block {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 36px 30px;
+  }
+
+  .comp-block-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .comp-block-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .comp-block-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .comp-block-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+  }
+
+  /* ─── APPLY SECTION ─── */
+  .apply-section {
+    padding: 100px 5%;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .apply-section .section-label { margin-bottom: 14px; }
+
+  .apply-section .section-title {
+    margin-bottom: 20px;
+  }
+
+  .apply-desc {
+    font-size: 17px;
+    color: var(--gray);
+    max-width: 520px;
+    margin: 0 auto 48px;
+    line-height: 1.75;
+  }
+
+  .airtable-embed-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(43,41,38,0.08);
+  }
+
+  .airtable-embed {
+    display: block;
+    width: 100%;
+    min-height: 800px;
+    border: none;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #231F1C;
+    padding: 36px 5%;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--coral);
+    margin-bottom: 8px;
+  }
+
+  .footer-copy {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 48px; }
+    .earn-cards { flex-direction: column; align-items: center; }
+    .earn-card { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">MomFit</a>
+  <a href="#apply" class="nav-cta">Apply Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob hb1"></div>
+  <div class="hero-blob hb2"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="live-dot"></div>
+      <span class="eyebrow-text">Now Hiring — Remote</span>
+    </div>
+    <h1>We're looking<br>for a <em>closer</em><br>who cares.</h1>
+    <p class="hero-sub">
+      MomFit helps busy moms reclaim their energy, confidence, and health. 
+      We need a proven setter + closer to connect the right women with the 
+      transformation they deserve.
+    </p>
+    <div class="hero-pills">
+      <span class="pill accent">Setter + Closer</span>
+      <span class="pill">100% Remote</span>
+      <span class="pill">30–35 hrs/week</span>
+      <span class="pill">Women's Health</span>
+      <span class="pill">High-Ticket</span>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#apply" class="btn-primary">Apply for This Role</a>
+      <a href="#role" class="btn-ghost">See full details ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE SECTION -->
+<section class="role-section" id="role">
+  <div style="text-align:center; margin-bottom:60px;">
+    <div class="section-label">The Role</div>
+    <div class="section-title">Enrollment Advisor<br>Setter + Closer</div>
+  </div>
+  <div class="two-col">
+    <div class="col">
+      <div class="col-title">What You'll Do</div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Start <strong>30+ new conversations daily</strong> with warm leads (Mon–Fri)</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Qualify prospects and build genuine trust through DMs and calls</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Book and run strategy calls to understand each lead's needs</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Close aligned prospects into our coaching program</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Follow up consistently — <strong>no lead left behind</strong></span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Maintain an organized, up-to-date CRM pipeline</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-title">Who You Are</div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text"><strong>Proven experience</strong> closing high-ticket offers — DMs and/or calls</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Skilled in the full funnel: setting conversations and closing deals</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Warm and authentic — you build trust fast, without scripted tactics</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Self-motivated and thrives without micromanagement</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Organized with strong follow-up habits and pipeline discipline</span>
+      </div>
+      <div class="role-item">
+        <span class="role-bullet">›</span>
+        <span class="role-text">Passionate about health, wellness, and empowering women</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMP SECTION -->
+<section class="comp-section">
+  <div class="comp-inner">
+    <div class="section-label">Compensation</div>
+    <div class="section-title" style="margin-bottom:48px;">How You Get Paid</div>
+    <div class="comp-grid">
+      <div class="comp-block">
+        <div class="comp-block-icon">💰</div>
+        <div class="comp-block-label">Base Pay</div>
+        <div class="comp-block-value">$1,000<span style="font-size:18px;font-weight:300;">/mo</span></div>
+        <div class="comp-block-desc">Earned with 30 conversations/day and minimum 5 monthly closes</div>
+      </div>
+      <div class="comp-block">
+        <div class="comp-block-icon">📈</div>
+        <div class="comp-block-label">Commission</div>
+        <div class="comp-block-value">10%</div>
+        <div class="comp-block-desc">Of cash collected on every closed deal — paid as payments are received</div>
+      </div>
+      <div class="comp-block">
+        <div class="comp-block-icon">🎯</div>
+        <div class="comp-block-label">Setter Bonus</div>
+        <div class="comp-block-value">+$55<span style="font-size:18px;font-weight:300;">/deal</span></div>
+        <div class="comp-block-desc">When you personally set and close the same deal</div>
+      </div>
+      <div class="comp-block">
+        <div class="comp-block-icon">🏆</div>
+        <div class="comp-block-label">Performance Incentive</div>
+        <div class="comp-block-value">+$25<span style="font-size:18px;font-weight:300;">/deal</span></div>
+        <div class="comp-block-desc">For every deal beyond 15 in a single month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY SECTION -->
+<section class="apply-section" id="apply">
+  <div class="section-label">Apply Today</div>
+  <div class="section-title">Ready to Join the MomFit Team?</div>
+  <p class="apply-desc">
+    If you're a proven closer who wants to sell something that genuinely changes women's lives — we'd love to hear from you.
+  </p>
+  <div class="airtable-embed-wrapper">
+    <iframe
+      class="airtable-embed"
+      src="https://airtable.com/embed/REPLACE_WITH_YOUR_AIRTABLE_FORM_ID"
+      frameborder="0"
+      onmousewheel=""
+      width="100%"
+      height="800"
+      style="background: transparent; border: none;"
+      title="MomFit Job Application Form"
+    ></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">MomFit · Breanna Miller Fitness</div>
+  <div class="footer-copy">© 2026 Breanna Miller Fitness · All rights reserved · Remote · United States</div>
+</footer>
+
+<script>
+  // Smooth reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.earn-card, .comp-block, .role-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
