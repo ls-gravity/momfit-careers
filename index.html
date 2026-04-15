@@ -387,6 +387,71 @@
   }
 
   /* ─── RESPONSIVE ─── */
+  /* ─── EARNINGS STRIP ─── */
+  .earnings-strip {
+    background: var(--blush);
+    padding: 80px 5%;
+  }
+
+  .earn-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .earn-card {
+    background: white;
+    flex: 1;
+    min-width: 220px;
+    max-width: 260px;
+    padding: 36px 32px;
+    text-align: center;
+    border-top: 4px solid transparent;
+    box-shadow: 0 4px 24px rgba(43,41,38,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .earn-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(43,41,38,0.1); }
+  .earn-card.featured { border-top-color: var(--coral); }
+  .earn-card:not(.featured) { border-top-color: rgba(196,154,108,0.4); }
+
+  .earn-card-tier {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+
+  .earn-card-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--coral);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .earn-card-deals {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 20px;
+  }
+
+  .earn-card-breakdown {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.8;
+    text-align: left;
+    border-top: 1px solid #F0E8E4;
+    padding-top: 16px;
+  }
+
   @media (max-width: 600px) {
     .hero h1 { font-size: 48px; }
     .earn-cards { flex-direction: column; align-items: center; }
@@ -429,6 +494,50 @@
       <a href="#role" class="btn-ghost">See full details ↓</a>
     </div>
   </div>
+</section>
+
+<!-- EARNINGS STRIP -->
+<section class="earnings-strip">
+  <div class="section-label">Earning Potential</div>
+  <div class="section-title">What You Can Earn</div>
+  <div class="earn-cards">
+    <div class="earn-card">
+      <div class="earn-card-tier">Target</div>
+      <div class="earn-card-amount">$5,800</div>
+      <div class="earn-card-deals">15 deals / month</div>
+      <div class="earn-card-breakdown">
+        Commission: $3,975<br>
+        Base: $1,000<br>
+        Setter Bonus: $825<br>
+        Incentive: —
+      </div>
+    </div>
+    <div class="earn-card featured">
+      <div class="earn-card-tier">High Performer</div>
+      <div class="earn-card-amount">$7,525</div>
+      <div class="earn-card-deals">20 deals / month</div>
+      <div class="earn-card-breakdown">
+        Commission: $5,300<br>
+        Base: $1,000<br>
+        Setter Bonus: $1,100<br>
+        Incentive: $125
+      </div>
+    </div>
+    <div class="earn-card">
+      <div class="earn-card-tier">Top Performer</div>
+      <div class="earn-card-amount">$9,250+</div>
+      <div class="earn-card-deals">25 deals / month</div>
+      <div class="earn-card-breakdown">
+        Commission: $6,625<br>
+        Base: $1,000<br>
+        Setter Bonus: $1,375<br>
+        Incentive: $250
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; font-size:13px; color:var(--gray); margin-top:28px;">
+    *Examples assume self-set + self-closed deals. Actual earnings depend on cash collected per deal.
+  </p>
 </section>
 
 <!-- ROLE SECTION -->
@@ -539,7 +648,7 @@
   <div class="airtable-embed-wrapper">
     <iframe
       class="airtable-embed"
-      src="https://airtable.com/embed/appGPp6oDxRDaW3ej/pagckoopvv6PDfcOM/form"
+      src="https://airtable.com/embed/REPLACE_WITH_YOUR_AIRTABLE_FORM_ID"
       frameborder="0"
       onmousewheel=""
       width="100%"
